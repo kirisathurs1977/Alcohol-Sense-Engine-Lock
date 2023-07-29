@@ -1,0 +1,56 @@
+Arduino Based Alcohol Sense Engine Lock Using ESP32
+
+
+Arduino microcontroller
+16×2 LCD
+ Alarm
+Gsm
+Gps
+Motor
+LED
+MQ3 sensor
+
+
+MQ3 Alcohol Sensor
+The MQ3 sensor is one of the most widely used in the MQ sensor series. It is a MOS (Metal Oxide Semiconductor) sensor. Metal oxide sensors are also known as Chemiresistors because sensing is based on the change in resistance of the sensing material when exposed to alcohol.
+
+The MQ3 alcohol sensor operates on 5V DC and consumes approximately 800mW. It can detect alcohol concentrations ranging from 25 to 500 ppm.
+ 1.Internal structure of MQ3 Alcohol Sensor
+The MQ3 is a heater-driven sensor. It is therefore covered with two layers of fine stainless steel mesh known as an “anti-explosion network”. It ensures that the heater element inside the sensor does not cause an explosion because we are sensing flammable gas (alcohol).
+
+It also protects the sensor and filters out suspended particles, allowing only gaseous elements to pass through the chamber.
+      2.ATEX Gas Detector
+
+When the outer mesh is removed, the sensor looks like this. The sensing element and six connecting legs that extend beyond the Bakelite base form the star-shaped structure. Two (H) of the six leads are in charge of heating the sensing element and are linked together by a Nickel-Chromium coil (a well-known conductive alloy).
+The remaining four signal-carrying leads (A and B) are connected with platinum wires. These wires are connected to the body of the sensing element and convey slight variations in the current flowing through the sensing element.
+
+The tubular sensing element is made of Aluminum Oxide (AL2O3) based ceramic with a Tin Dioxide coating (SnO2). Tin Dioxide is the most important material because it is sensitive to alcohol. The ceramic substrate, on the other hand, improves heating efficiency and ensures that the sensor area is continuously heated to the working temperature.
+
+To summarize, the Heating System is composed of a Nickel-Chromium coil and an Aluminum Oxide-based ceramic, while the Sensing System is composed of Platinum wires and a Tin Dioxide coating.
+3.How Does the MQ3 Alcohol Sensor Work?
+When a SnO2 semiconductor layer is heated to a high temperature, oxygen is adsorbed on the surface. When the air is clean, electrons from the conduction band of tin dioxide are attracted to oxygen molecules. This creates an electron depletion layer just beneath the surface of the SnO2 particles, forming a potential barrier. As a result, the SnO2 film becomes highly resistive and prevents electric current flow.
+In the presence of alcohol, however, the surface density of adsorbed oxygen decreases as it reacts with the alcohol, lowering the potential barrier. As a result, electrons are released into the tin dioxide, allowing current to freely flow through the sensor.
+
+4.MQ3 Alcohol Sensor Module Hardware Overview
+The MQ3 alcohol sensor is simple to use and has two different outputs. It not only provides a binary indication of the presence of alcohol, but also an analog representation of its concentration in air.
+
+The sensor’s analog output voltage (at the A0 pin) varies in proportion to the alcohol concentration. The higher the concentration of alcohol in the air, the higher the output voltage; the lower the concentration, the lower the output voltage. The animation below shows the relationship between alcohol concentration and output voltage.
+
+This analog signal is digitized by an LM393 High Precision Comparator and made available at the Digital Output (D0) pin.
+
+The module includes a potentiometer for adjusting the sensitivity of the digital output (D0). You can use it to set a threshold so that when the alcohol concentration exceeds the threshold value, the module outputs LOW otherwise HIGH.
+Reference
+https://lastminuteengineers.com/mq3-alcohol-sensor-arduino-tutorial/#google_vignette
+
+
+
+
+
+
+
+
+
+
+
+
+
